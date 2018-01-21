@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Réunions</title>
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/upload.js"></script>
+  <script src="../js/insererDonnees.js"></script>
+  <script src="../js/recupererDonnees.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.0/combined/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.0/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- NAV -->
+  <div class="topbg d-none d-lg-block"></div>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a href="reunions.html" class="navbar-brand">
+          <img src="../img/logo.png" width="40px" height="40px">
+          <span class="h4 text-success d-inline align-middle mx-2">Commission</span>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="reunions.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="a-propos.html">À propos</a>
+              </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Déconnexion</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- RÉUNION TETE-->
+  <section id="reunion-header">
+    <div class="container mb-4">
+      <div class="chemin">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">Accueil</a></li>
+          <li class="breadcrumb-item active"><a href="reunions.html">Réunions</a></li>
+          <li class="breadcrumb-item active">Créer</li>
+          <li class="breadcrumb-item active">Étape 1</li>
+        </ol>
+      </div>
+      <div class="container text-center">
+          <span class="display-4 text-dark">Nouvelle Réunion</span><br>
+          <hr>
+          <span class="lead">Étape 1 - créer une réunion</span>
+      </div>
+    </div>
+  </section>
+
+<!-- CREER CORPS-->
+<section id="creer-body-1 ">
+  <div class="container">
+    <div class="card m-4 p-5 lead align-self-center">
+      <form id="formEtape1">
+                <input name="formEtape" type="hidden" value="1"/>
+
+                <div class="row ">
+                    <div class="col-lg-3 text-success align-self-center"><legend>Commission</legend></div>
+                    <div class="col-lg-5 ">
+                        <div class="form-group">
+                              <select id="commission" name="commission" class="form-control m-2"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                      <div class="col-lg-3 text-success align-self-center"><legend>Échéance</legend></div>
+                      <div class="col-lg-3 m-2">
+                            <input id="date_fin" name="date_fin"/>
+                            <script>
+                                var today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+                                $('#date_fin').datepicker({
+                                    format: 'yyyy/mm/dd',
+                                    iconsLibrary: 'fontawesome',
+                                    uiLibrary: 'bootstrap',
+                                    minDate: today,
+                                });
+                            </script>
+                      </div>
+                      <div class="col-lg-3 align-self-center m-2">
+                        <select id="heure_fin" name="heure_fin"  class="form-control">
+                            <option>08:00</option><option>09:00</option><option>10:00</option><option>11:00</option>
+                            <option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option>
+                            <option>16:00</option><option>17:00</option><option>18:00</option><option>19:00</option>
+                            <option>20:00</option>
+                        </select>
+                      </div>
+                </div>
+                <div class="row mb-4">
+                      <div class="col-lg-3 text-success align-self-flex-start"><legend>Description</legend></div>
+                      <div class="col-lg-6">
+                            <textarea id="description" name="description" class="form-control m-2" rows="5"></textarea>
+                      </div>
+
+                </div>
+                <div class="row mb-4 ml-1">
+                      <div class="col-lg-3"><legend></legend></div>
+                      <div class="col-lg-3 ">
+                        <label class="form-check-label">
+                        <input type="checkbox" id="bulletin_secret" name="bulletin_secret" class="form-check-input ">Bulletin Secret</label>
+                      </div>
+                </div>
+                <div class="row mb-4">
+                      <div class="col-lg-3 text-success align-self-center"><legend>Importer</legend></div>
+                      <div class="col-lg-6">
+
+
+                      </div>
+
+                </div>
+                <div class="d-lg-flex">
+                    <div class="ml-auto p-2"><a href="reunions.html"><button type="button" name="Annuler" class="btn btn-danger btn-block">Annuler</button></a></div>
+                    <div class="p-2 "><input id="btn-suivant" type="button" class="btn btn-outline-success btn-block" value="Continuer"></div></a>
+                </div>
+      </form>
+
+      <form name="form1" id="form1" method="post" action="../../serveur/php/upload.php" enctype="multipart/form-data"> <!--<form name="form1" id="form1" method="post" action="../php/upload.php" enctype="multipart/form-data">-->
+           <div class="form-group m-2">
+                       <input type="file" class="form-control" id="fileUpLoad[]" name="fileUpLoad[]" multiple="">
+                       <button id="btn-upload" type="button" class=" mt-3 btn btn-sm btn-outline-primary">UpLoad</button>
+           </div>
+           <div class="alert alert-success alert-dismissible fade" role="alert">
+               <strong>Completé!</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les fichiers ont été telechargés.
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+           </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</body>
+
+</html>

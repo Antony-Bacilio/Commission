@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Réunions</title>
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.0/combined/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/gijgo/1.7.0/combined/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <!-- NAV -->
+  <div class="topbg d-none d-lg-block"></div>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a href="reunions.html" class="navbar-brand">
+          <img src="../img/logo.png" width="40px" height="40px">
+          <span class="h4 text-success d-inline align-middle mx-2">Commission</span>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="reunions.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="a-propos.html">À propos</a>
+              </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Déconnexion</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- RÉUNION TETE-->
+  <section id="reunion-header">
+    <div class="container mb-4">
+      <div class="chemin">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">Accueil</a></li>
+          <li class="breadcrumb-item active"><a href="reunions.html">Réunions</a></li>
+          <li class="breadcrumb-item active">Créer</li>
+          <li class="breadcrumb-item active"><a href="creer-reunion-1.html">Étape 1</a></li>
+          <li class="breadcrumb-item active">Étape 2</li>
+        </ol>
+      </div>
+      <div class="container text-center">
+          <span class="display-4 text-dark">Nouvelle Réunion</span><br>
+          <hr>
+          <span class="lead">Étape 2 - ajouter des étudiants</span>
+      </div>
+    </div>
+  </section>
+
+<!-- CREER CORPS-->
+<section id="creer-body-3 ">
+  <div class="container">
+    <div class="card m-4 p-5  align-self-center">
+        <form id="formEtape2">
+                  <input name="formEtape" type="hidden" value="2"/>
+
+                  <div class="row">
+                      <div class="col px-4">
+                        <div class="row text-success text-center">
+                          <legend >Réunion</legend>
+                        </div>
+                        <div class="row justify-content-center">
+                            <p>
+                              DUT	Semestre 3 <br>
+                              Échéance : 01/01/2018 à 11h
+                            </p>
+                        </div>
+                        <div class="row justify-content-center">
+                          <button class="btn btn-outline-primary">Modifier</button>
+                        </div>
+                        <hr>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-4">
+                        <div class="row mb-3 text-success">
+                          <legend>Ajouter un étudiant</legend>
+                        </div>
+                        <div class="row justify-content-between">
+                            <strong>Nom</strong>
+                            <div class="form-group">
+                                <select id="nom" name="nom" class="form-control" onchange="selectNom();">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <strong>Possibilités</strong>
+                        </div>
+                        <div class="row ">
+                            <div class="form-group m-auto">
+                                <label class="form-check-label">
+                                <input id="option1" value="1" type="checkbox" class="form-check-input">Validation</label><br>
+                                <label class="form-check-label">
+                                <input id="option2" value="2" type="checkbox" class="form-check-input">Redoublement</label><br>
+                                <label class="form-check-label">
+                                <input id="option3" value="3" type="checkbox" class="form-check-input">Reorientation</label><br>
+                                <label class="form-check-label">
+                                <input id="option4" value="4" type="checkbox" class="form-check-input">Comprensation ...</label><br>
+                                <label class="form-check-label">
+                                <input id="option5" value="5" type="checkbox" class="form-check-input">Passage ...</label><br>
+                            </div>
+                        </div>
+                        <div class="row justify-content-between my-3">
+                          <strong>Situation</strong>
+                            <textarea id="message" class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="row d-block">
+                          <button id="btn-ajouter" onclick="ajouter();" type="button" class="btn btn-outline-primary btn-block" name="button">ajouter <i class="fa fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 px-4">
+                      <div class="row text-success">
+                        <legend >Etudiants concernés</legend>
+                        <!--<form action="php/upload.php" method="post" enctype="multipart/form-data">
+                              Select image to upload:
+                              <input type="file" name="archivo" id="archivo">
+                              <input type="submit" value="Upload Image" name="submit">
+                        </form>-->
+                      </div>
+                      <div class="row mb-4">
+                        <div class="col ml-5"><strong>nombre total actual</strong><span id="nb-total" class="ml-5">0</span></div>
+
+                      </div>
+                      <div class="row">
+                        <div class="col ">
+                          <table class="table table-striped">
+                                <thead class="thead-inverse">
+                                  <tr>
+                                    <th>#</th>
+                                    <th>Nom</th>
+                                    <th></th>
+
+                                  </tr>
+                                </thead>
+                                <tbody id="tab-etud">
+
+                                </tbody>
+                        </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-md-flex">
+                      <div class="ml-auto p-2"><a href="creerReunion_Etape1.html"><button type="button" name="Annuler" class="btn btn-outline-danger btn-block">Retour</button></a></div>
+                      <!--<div class="mr-auto p-2"><button type="button" name="Annuler" class="btn btn-danger btn-block">Annuler</button></div>-->
+
+                      <div class="p-2 "><input type="button" class="btn btn-primary btn-block" value="Continuer"></div></a>
+                  </div>
+          </form>
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+
+  var nbEtud = 0;
+  function ajouter(){
+        nbEtud ++;
+        var ObjNom = document.getElementById('nom');
+        var SelNom = ObjNom.options[ObjNom.selectedIndex].text;
+        /*var ObjPrenom = document.getElementById('prenom');
+        var SelPrenom = ObjPrenom.options[ObjPrenom.selectedIndex].text;*/
+
+        document.getElementById('tab-etud').innerHTML =
+        '<tr><td scope="row">' + nbEtud + '</td></td><td>' +SelNom +'</td><td><a class="btn btn-sm btn-outline-danger" href="#"><i class="fa fa-trash"></i></a></td></tr>'
+
+        document.getElementById('nb-total').innerHTML = nbEtud ;
+  }
+
+</script>
+<script src="../js/recupererEtudiantNom.js"></script>
+
+
+
+</body>
+</html>

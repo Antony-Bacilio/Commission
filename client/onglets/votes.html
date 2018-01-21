@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Réunions</title>
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- NAV -->
+  <div class="topbg d-none d-lg-block"></div>
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+    <div class="container">
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a href="reunions.html" class="navbar-brand">
+          <img src="../img/logo.png" width="40px" height="40px">
+          <span class="h4 text-success d-inline align-middle mx-2">Commission</span>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="reunions.html">Accueil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="a-propos.html">À propos</a>
+              </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index.html">Déconnexion</a>
+              </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- RÉUNION TETE-->
+  <section id="reunion-header">
+    <div class="container mb-4">
+      <div class="chemin">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active">Accueil</a></li>
+          <li class="breadcrumb-item active"><a href="reunions.html">Réunions</a></li>
+        </ol>
+      </div>
+      <div class="container">
+        <div class="row">
+          <span class="display-4 mr-5 ">Réunion #0042</span>
+          <button class="btn btn-outline-primary align-self-center">
+            <a href="creer-reunion-1.html" class="btn-outline-primary">Modifier</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RÉUNION CORPS-->
+  <section id="reunion-section ">
+    <div class="container ">
+      <div class="row">
+        <!-- TYPE RÉUNION-->
+        <div class="col-lg-3 d-lg-block">
+          <div class="card mb-5">
+            <div class="card-header">
+              <span class="lead font-weight-bold">DUT Semestre 4</span>
+            </div>
+            <div class="card-body">
+              <div class="card-title display-4 row justify-content-center">
+                <span class="text-dark mr-2">5</span><small>/</small>
+                <span class="text-success ml-2">5</span>
+              </div>
+              <div class="card-subtitle h6 text-muted row justify-content-center">
+                <small>étudiants à traiter</small>
+              </div>
+              <hr>
+              <p class="py-3 text-center">
+                ÉChéance :
+                <br>01/01/2018 à 11h
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia suscipit aliquid qui ut molestiae fugit esse eos possimus, repellat expedita porro obcaecati necessitatibus molestias dolorum.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="dropdown">
+                    <button class="btn btn-outline-info" type="button" data-toggle="dropdown">
+                        <i class="fa fa-cog"></i>
+                    </button>
+                    <div class="dropdown-menu" >
+                        <a class="dropdown-item" href=""><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-trash"></i></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+            Il reste <span>6</span> jours
+          </div>
+          </div>
+        </div>
+        <!-- LISTE Etudiants-->
+          <div class="col-lg-9 col-md-12">
+            <span class="h1 font-weight-light">Document complémentaire</span>
+            <div class="card mb-4 mt-4">
+              <div class="card-body">
+                <div class="container">
+                  <table class="table table-sm table-hover ">
+                    <thead>
+                        <tr>
+                              <th>Nom de ficher</th>
+                              <th>Taille</th>
+                              <th>Voir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <!--<td>Note.pdf</td>
+                            <td>1,23Mo</td>
+                            <td><a href="../php/telecharger.php" class="btn btn-sm btn-outline-success">Voir en ligne</a></td>-->
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+              </div>
+            </div>
+
+
+
+            <span class="h1 font-weight-light">Étudiants</span>
+            <div class="card-deck mt-4  ">
+              <div class="row container my-2">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3 mb-4 d-flex justify-content-center">
+                        <div class="bg-dark "style="width:150px;height:150px">
+                          <img src="img/person1.jpg" alt="" style="width:150px;height:150px">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 ">
+                      <div class="container">
+                        <div class="mb-2">
+                          <span class="align-self-center">#1</span>
+                        </div>
+                        <span class="lead font-weight-bold">
+                          Dupont Toto
+                        </span>
+                        <p class="mt-2 font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nam, et delectus harum, sapiente iusto!</p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-5">
+                     <div class="vote container">
+                       <div class="row font-weight-bold mb-3">
+                         Votes effectués
+                       </div>
+                       <div class="progress ">
+                          <div class="progress-bar" style="width:35%;">35%</div>
+                      </div>
+                      <span class="d-flex justify-content-end">Redoubler</span>
+                      <div class="progress ">
+                          <div class="progress-bar bg-warning" style="width:15%;">15%</div>
+                      </div>
+                      <span class="d-flex justify-content-end">Réorienter</span>
+                      <div class="progress">
+                          <div class="progress-bar bg-danger" style="width:50%;">50%</div>
+                      </div>
+                      <span class="d-flex justify-content-end">Valider</span>
+                      </div>
+                      <div class="desicion container">
+                        <div class="row font-weight-bold mb-3">
+                          Votre décision
+                        </div>
+                          <div class="row d-flex justify-content-between mx-1">
+                            <select id="commissions"class="form-control w-50">
+                            <option>Redoubler</option><option>Réorienter</option><option>Valider</option>
+                            </select>
+                            <input type="submit" name="" class="btn btn-primary d-flex" value="Je vote">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row container my-2">
+              <div class="card d-block">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3 mb-4 d-flex justify-content-center">
+                      <div class="bg-dark "style="width:150px;height:150px">
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 ">
+                      <div class="container">
+                        <div class="mb-2">
+                          <span class="align-self-center">#1</span>
+                        </div>
+                        <span class="lead font-weight-bold">
+                          Dupont Toto
+                        </span>
+                        <p class="mt-2 font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nam, et delectus harum, sapiente iusto!</p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-5">
+                     <div class="vote container">
+                       <div class="row font-weight-bold mb-3">
+                         Votes Effectué
+                       </div>
+                       <div class="progress m-0">
+                          <div class="progress-bar" style="width:35%;">35%</div>
+                      </div>
+                      <span class="d-flex justify-content-end">Redoubler</span>
+                      <div class="progress ">
+                          <div class="progress-bar bg-warning" style="width:15%;">15%</div>
+                      </div>
+                      <span class="d-flex justify-content-end">Réorienter</span>
+                      <div class="progress">
+                          <div class="progress-bar bg-danger" style="width:50%;">50%</div>
+                      </div>
+                      <span class="d-flex justify-content-end">Valider</span>
+                      </div>
+                      <div class="desicion container">
+                        <div class="row font-weight-bold mb-3">
+                          Votre décision
+                        </div>
+                          <div class="row d-flex justify-content-between mx-1">
+                            <select id="commissions"class="form-control w-50">
+                            <option>00h00</option><option>06h00</option><option>12h00</option><option>18h00</option>
+                            </select>
+                            <input type="submit" name="" class="btn btn-primary d-flex" value="Je vote">
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/pluginPDF.js"></script>
+  <script src="../js/uploadListe.js"></script>
+  <script src="../js/votes.js"></script>
+</html>
