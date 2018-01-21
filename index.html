@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Commission</title>
+  <link rel="stylesheet" href="client/css/font-awesome.min.css">
+  <link rel="stylesheet" href="client/css/bootstrap.css">
+  <link rel="stylesheet" href="client/css/style.css">
+</head>
+
+<body>
+<div class="topbg d-none d-lg-block"></div>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+          <div class="container">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a href="index.html" class="navbar-brand">
+                <img src="client/img/logo.png" width="40" height="40">
+                <span class="h4 text-success d-inline align-middle mx-2">Commission</span>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav mr-auto">
+                    <!--<li class="nav-item">
+                      <a class="nav-link" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="client/onglets/a-propos.html">À propos</a>
+                    </li>-->
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html">Connexion</a>
+                    </li>
+              </ul>
+            </div>
+          </div>
+  </nav>
+
+    <!-- BIENVENUE SECTION -->
+    <section id="bienvenue-section">
+          <div class="container">
+                <div class="row">
+                      <div class="col-lg-4 p-3">
+                          <div class="card bg-light text-center card-form pt-3 pb-5">
+                            <div class="card-body">
+
+                                <div class="h3 text-success" >Connexion</div>
+                                <hr class="my-4">
+
+                                <form id="formLogin" method="post" action="client/onglets/reunions.html">
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" class="form-control form-control" placeholder=Email@univ-lorraine.fr>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" id="password" name="password" class="form-control form-control" placeholder="Mot de Passe">
+                                    </div>
+                                    <input type="button" name="login" id="login" class="btn btn-outline-success btn-block" value="GO !">
+                                </form>
+
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-8 d-none d-lg-block">
+                            <div id="" class="card p-3 d-block my-3 " >
+                              <div class="d-flex col justify-content-center">
+                                  <img src="client/img/logo.png" style="width:68px; height:68px;" alt="">
+                                  <div class="display-4 ml-3 align-self-center">Commission</div>
+                              </div>
+
+                              <span class="my-3 text-muted d-flex col justify-content-center lead">Une nouvelle manière de gérer les commissions de fin de semestre.</span>
+
+                              <div class="d-flex flex-row col justify-content-center ">
+                                  <div class="p-3 align-self-start">
+                                    <i class="fa fa-check"></i>
+                                  </div>
+                                  <div class="p-3 align-self-end">
+                                    <em>Pratique</em>
+                                  </div>
+                              </div>
+                              <div class="d-flex flex-row col justify-content-center ">
+                                  <div class="p-3 align-self-start">
+                                    <i class="fa fa-check"></i>
+                                  </div>
+                                  <div class="p-3 align-self-end">
+                                    <em>Efficace</em>
+                                  </div>
+                              </div>
+                              <div class="d-flex flex-row col justify-content-center ">
+                                  <div class="p-3 align-self-start">
+                                      <i class="fa fa-check"></i>
+                                  </div>
+                                  <div class="p-3 align-self-end">
+                                      <em>Ergonomique</em>
+                                  </div>
+                              </div>
+                            </div>
+                      </div>
+                </div>
+        </div>
+    </section>
+
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>-->
+    <script src="client/js/jquery.min.js"></script>
+    <script src="client/js/popper.min.js"></script>
+    <script src="client/js/bootstrap.min.js"></script>
+    <script src="client/js/login.js"></script>
+  </body>
+
+</html>
