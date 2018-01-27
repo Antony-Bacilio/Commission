@@ -1,10 +1,12 @@
 <?php
 
+//DEFINE('MYSQL_SERVEUR_BASE','mysql:host=https://infodb.iutmetz.univ-lorraine.fr; dbname=bacilios1_projet_tutore_s3');
+//DEFINE ('MYSQL_UTILISATEUR','bacilios1_appli');
+//DEFINE ('MYSQL_MOTDEPASSE','phpmyadmin');
+DEFINE('MYSQL_SERVEUR_BASE','mysql:host=localhost;dbname=projet_tutore_s3');
+DEFINE('MYSQL_UTILISATEUR', 'root');
+DEFINE ('MYSQL_MOTDEPASSE','');
 
-//DEFINE('MYSQL_SERVEUR_BASE','mysql:host=localhost;dbname=projet_tutore_s3');
-DEFINE('MYSQL_SERVEUR_BASE','mysql:host=https://infodb.iutmetz.univ-lorraine.fr; dbname=bacilios1_projet_tutore_s3');
-DEFINE ('MYSQL_UTILISATEUR','bacilios1_appli');
-DEFINE ('MYSQL_MOTDEPASSE','phpmyadmin');
 
 class Connecter{
 
